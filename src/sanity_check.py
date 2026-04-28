@@ -2,16 +2,6 @@ import cv2
 import numpy as np
 import re
 
-
-'''
-def parse_line(line):
-    # This pattern specifically looks for the digits inside np.int64(...)
-    # It matches: (np.int64(NUMBER), np.int64(NUMBER))
-    pattern = r"\(np\.int64\((\d+)\),\s*np\.int64\((\d+)\)\)"
-    matches = re.findall(pattern, line)
-    return [(int(x), int(y)) for x, y in matches]
-'''
-
 def parse_line(line):
     # This pattern looks for: [NUMBER, NUMBER]
     # \d+ matches one or more digits
